@@ -13,9 +13,7 @@ function Home() {
       setTodos(JSON.parse(storedTodos));
     }
   }, []);
-  const todos_completed = todos.filter(
-    (todo) => todo.is_completed == true
-  ).length;
+  const todos_completed = todos.filter((todo) => todo?.is_completed == true).length;
   const total_todos = todos.length;
     return(
         <div className="wrapper">
