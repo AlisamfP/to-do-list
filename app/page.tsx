@@ -6,10 +6,11 @@ import TODOHero from "../components/TODOHero";
 import TODOList from "../components/TODOList";
 
 interface TodoItem {
-  id: string, 
-  value: string,
-  is_completed: boolean
+  id: string; 
+  value: string;
+  is_completed: boolean;
 }
+
 function Home() {
   const [todos, setTodos] = React.useState<TodoItem[]>([]);
   React.useEffect(() => {
