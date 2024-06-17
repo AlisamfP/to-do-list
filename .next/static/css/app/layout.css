@@ -91,6 +91,10 @@ body {
 button {
   cursor: pointer;
 }
+#title {
+  text-align: center;
+  padding-bottom: 1em;
+}
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);

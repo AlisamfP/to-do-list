@@ -4,7 +4,7 @@ function Header() {
             <svg>
                 <path d="" />
             </svg>
-            <h1>TODO</h1>
+            <h1 id="title">TODO</h1>
         </>
     );
 }
