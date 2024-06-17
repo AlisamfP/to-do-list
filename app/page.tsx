@@ -5,15 +5,20 @@ import Header from "../components/Header";
 import TODOHero from "../components/TODOHero";
 import TODOList from "../components/TODOList";
 
+interface TodoItem {
+  id: string, 
+  value: string,
+  is_completed: boolean
+}
 function Home() {
-  const [todos, setTodos] = React.useState([]);
+  const [todos, setTodos] = React.useState<TodoItem[]>([]);
   React.useEffect(() => {
     const storedTodos = localStorage.getItem("todos");
     if (storedTodos) {
       setTodos(JSON.parse(storedTodos));
     }
   }, []);
-  const todos_completed = todos.filter((todo) => todo?.is_completed == true).length;
+  const todos_completed = todos.filter((todo) => todo.is_completed == true).length;
   const total_todos = todos.length;
     return(
         <div className="wrapper">
